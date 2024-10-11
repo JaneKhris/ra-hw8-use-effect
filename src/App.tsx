@@ -5,7 +5,7 @@ import Details from "./components/Details";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState<number|null>(null);
 
   useEffect(() => {
     fetch(import.meta.env.VITE_URL)
@@ -16,11 +16,12 @@ function App() {
   }, []);
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    setUserId(event.target.getAttribute("user-id"));
+    setUserId(Number((event.target as HTMLElement).getAttribute("user-id")));
     document.querySelectorAll('.user').forEach((user)=> {
       user.className = "user"
-    })
-    event.target.className = "user active"
+    });
+
+    (event.target as HTMLElement).className = "user active"
 
   };
 
