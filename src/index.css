@@ -1,0 +1,45 @@
+#root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 800px;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  width: 300px;
+  /* display: flex; */
+}
+
+.user, .detail {
+  border: 1px solid gray;
+  height: 3rem;
+  line-height: 3rem
+}
+
+.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.details {
+  width: 300px;
+  /* display: flex; */
+}
+
+.avatar {
+  height: 300px;
+}
+
+
+.loading {
+  background-color: pink;
+}
+
+.key {
+  text-transform: capitalize;
+}
